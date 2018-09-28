@@ -12,12 +12,12 @@ public class RockPaperScissors {
 		int userGuess;
 		int computerGuess;
 		int count = 0;
+		int choice = 0;
+		
+		for(int i = 0; i < 5; i++) {
 		
 		Scanner input = new Scanner(System.in);
 		computerGuess = (int )(Math.random() * 3 + 1);
-		
-		while(count < 5)
-		{
 		
 		System.out.println("1 for Rock \n2 for Paper \n3 for Scissors");
 		userGuess = input.nextInt();
@@ -91,7 +91,10 @@ public class RockPaperScissors {
 		
 		System.out.println("\nDid you win?\n" + result + "\nNumber of wins " + count);
 		
-		}
+		System.out.println("Would you like to play again?");
+		choice = input.nextInt();
+		
+		}while(choice != 999);
 
 	}
 
