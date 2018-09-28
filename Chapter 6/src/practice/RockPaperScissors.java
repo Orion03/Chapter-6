@@ -11,9 +11,13 @@ public class RockPaperScissors {
 		
 		int userGuess;
 		int computerGuess;
+		int count = 0;
 		
 		Scanner input = new Scanner(System.in);
 		computerGuess = (int )(Math.random() * 3 + 1);
+		
+		while(count < 5)
+		{
 		
 		System.out.println("1 for Rock \n2 for Paper \n3 for Scissors");
 		userGuess = input.nextInt();
@@ -28,6 +32,7 @@ public class RockPaperScissors {
 			else if(computerGuess == 2)
 			{
 				result = "The computer guessed Paper. You win!";
+				count = count +1;
 			}
 			
 			else if(computerGuess == 3)
@@ -41,6 +46,7 @@ public class RockPaperScissors {
 			if(computerGuess == 1)
 			{
 				result = "The computer guessed Rock. You win!";
+				count = count +1;
 			}
 			
 			else if(computerGuess == 2)
@@ -64,6 +70,7 @@ public class RockPaperScissors {
 			else if(computerGuess == 2)
 			{
 				result = "The computer guessed Paper. You win!";
+				count = count +1;
 			}
 			
 			else if(computerGuess == 3)
@@ -82,13 +89,10 @@ public class RockPaperScissors {
 			result = "Where you sought for answers you found a hollow shell. You lose.";
 		}
 		
-		displayMessage(result);
+		System.out.println("\nDid you win?\n" + result + "\nNumber of wins " + count);
+		
+		}
 
-	}
-	
-	public static void displayMessage(String result)
-	{
-		System.out.println(result);
 	}
 
 }
