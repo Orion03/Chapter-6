@@ -5,14 +5,14 @@ public class CountByThrees {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		for(int i = 0; i <= 10; i = i++)
+		for(int i = 0; i <= 300; i = i + 3)
 		{
-			System.out.println("Count " + i);
-		}
-		
-		for(int j = 10; j >= 0; j--)
-		{
-			System.out.print("Count " + j);
+			System.out.print(" " + i);
+			
+			if(i % 30 == 0)
+			{
+				System.out.println();
+			}
 		}
 
 	}
