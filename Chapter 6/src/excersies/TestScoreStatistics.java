@@ -14,13 +14,13 @@ public class TestScoreStatistics {
 		int total = 0;
 		int average;
 		
+		System.out.println("Enter a test score, enter 999 to exit >> ");
+		
 		Scanner input = new Scanner(System.in);
 		Score = input.nextInt();
 		
-		do
+		while(Score == 999)
 		{
-			System.out.println("Enter a test score >> ");
-			Score = input.nextInt();
 			
 			if(Score > high)
 			{
@@ -43,7 +43,7 @@ public class TestScoreStatistics {
 			
 			average = total / count;
 			
-		}while(Score != 999);
+		}
 
 	}
 
