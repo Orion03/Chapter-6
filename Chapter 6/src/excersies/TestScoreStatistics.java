@@ -47,6 +47,9 @@ public class TestScoreStatistics {
 		}while(Score != 999);
 		
 		System.out.println("Total: " + total);
+		System.out.println("Lowest score: " + low);
+		System.out.println("Highest score: " + high);
+		System.out.println("Average score: " + average);
 	}
 
 }
