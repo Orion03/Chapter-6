@@ -14,8 +14,6 @@ public class TestScoreStatistics {
 		int total = 0;
 		int average;
 		
-		System.out.println("Enter a test score, enter 999 to exit >> ");
-		
 		Scanner input = new Scanner(System.in);
 		
 		do
@@ -23,13 +21,13 @@ public class TestScoreStatistics {
 			System.out.println("Enter a test score, enter 999 to exit >> ");
 			Score = input.nextInt();
 			
-			if(Score > high)
+			if(Score > high && Score != 999)
 			{
 				high = Score;
 				count = count +1;
 			}
 			
-			else if(Score < low)
+			else if(Score < low && Score != 999)
 			{
 				low = Score;
 				count = count +1;
@@ -39,6 +37,9 @@ public class TestScoreStatistics {
 			{
 				System.out.println("Error.");
 			}
+				
+			
+			
 			
 			total = total + Score;
 			
