@@ -8,17 +8,42 @@ public class TestScoreStatistics {
 		// TODO Auto-generated method stub
 		
 		int Score;
+		int high = 0;
+		int low = 100;
+		int count = 0;
+		int total = 0;
+		int average;
 		
 		Scanner input = new Scanner(System.in);
 		Score = input.nextInt();
 		
 		do
 		{
-			if(Score <= 0 || Score >= 100)
+			System.out.println("Enter a test score >> ");
+			Score = input.nextInt();
+			
+			if(Score > high)
+			{
+				high = Score;
+				count = count +1;
+			}
+			
+			else if(Score < low)
+			{
+				low = Score;
+				count = count +1;
+			}
+			
+			else if(Score > 100 || Score < 0)
 			{
 				System.out.println("Error.");
 			}
-		}while(Score == 999);
+			
+			total = total + Score;
+			
+			average = total / count;
+			
+		}while(Score != 999);
 
 	}
 
